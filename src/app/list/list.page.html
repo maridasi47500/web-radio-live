@@ -1,0 +1,16 @@
+<ion-header>
+	  <ion-toolbar>
+		      <ion-title>Radio  Live</ion-title>
+		        </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+	<ion-item button detail="true" *ngFor="let x of radios"  [routerLink]="['/list/'+x.id]">
+		<ion-thumbnail slot="start">
+			<img alt="Silhouette of mountains" src="{{x.pic}}" />
+				          </ion-thumbnail>
+		  <ion-label>
+			  <h3>{{x.title}}</h3>
+			  <p>Genres: {{x.genres}}</p>
+				    </ion-label>
+	</ion-item>
+</ion-content>
